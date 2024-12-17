@@ -15,27 +15,32 @@ interface PricingPlan {
 
 const Index = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
-  const [selectedRegion, setSelectedRegion] = useState("india");
+  const [selectedRegion, setSelectedRegion] = useState("worldwide");
 
   const regions = {
-    india: {
+    worldwide: {
       currency: "₹",
       multiplier: 1,
       symbol: "INR"
     },
+    india: {
+      currency: "₹",
+      multiplier: 15,
+      symbol: "INR"
+    },
     gcc: {
       currency: "د.إ",
-      multiplier: 3.5,
+      multiplier: 52.5,
       symbol: "AED"
     },
     europe: {
       currency: "€",
-      multiplier: 4,
+      multiplier: 60,
       symbol: "EUR"
     },
     uk: {
       currency: "£",
-      multiplier: 4.5,
+      multiplier: 67.5,
       symbol: "GBP"
     }
   };
@@ -43,7 +48,7 @@ const Index = () => {
   const basePricingPlans: PricingPlan[] = [
     {
       name: "Starter",
-      basePrice: 14999,
+      basePrice: 999,
       description: "Perfect for small businesses starting with workflow automation",
       features: [
         "2 Workflow Automations",
@@ -56,7 +61,7 @@ const Index = () => {
     },
     {
       name: "Professional",
-      basePrice: 39999,
+      basePrice: 9999,
       description: "Ideal for growing businesses requiring advanced automation",
       features: [
         "10 Workflow Automations",
@@ -139,6 +144,7 @@ const Index = () => {
                 <SelectValue placeholder="Select Region" />
               </SelectTrigger>
               <SelectContent>
+                <SelectItem value="worldwide">Worldwide (INR)</SelectItem>
                 <SelectItem value="india">India (INR)</SelectItem>
                 <SelectItem value="gcc">GCC (AED)</SelectItem>
                 <SelectItem value="europe">Europe (EUR)</SelectItem>
