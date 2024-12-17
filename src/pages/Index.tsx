@@ -5,6 +5,14 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Check } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
+interface PricingPlan {
+  name: string;
+  basePrice?: number;
+  price?: string;
+  description: string;
+  features: string[];
+}
+
 const Index = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedRegion, setSelectedRegion] = useState("india");
@@ -32,7 +40,7 @@ const Index = () => {
     }
   };
 
-  const basePricingPlans = [
+  const basePricingPlans: PricingPlan[] = [
     {
       name: "Starter",
       basePrice: 14999,
