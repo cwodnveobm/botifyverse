@@ -23,11 +23,6 @@ const Index = () => {
       multiplier: 1,
       symbol: "INR"
     },
-    india: {
-      currency: "₹",
-      multiplier: 15,
-      symbol: "INR"
-    },
     gcc: {
       currency: "د.إ",
       multiplier: 52.5,
@@ -132,7 +127,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Pricing Section */}
         <div className="mt-32">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
             Choose Your Plan
@@ -145,7 +139,6 @@ const Index = () => {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="worldwide">Worldwide (INR)</SelectItem>
-                <SelectItem value="india">India (INR)</SelectItem>
                 <SelectItem value="gcc">GCC (AED)</SelectItem>
                 <SelectItem value="europe">Europe (EUR)</SelectItem>
                 <SelectItem value="uk">UK (GBP)</SelectItem>
