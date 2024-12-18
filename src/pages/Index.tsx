@@ -42,45 +42,45 @@ const Index = () => {
 
   const basePricingPlans: PricingPlan[] = [
     {
-      name: "Oggy's Basic Plan",
+      name: "Basic Plan",
       basePrice: 999,
-      description: "Perfect for small businesses, as simple as Oggy's daily routine!",
+      description: "Perfect for small businesses starting with bot automation",
       features: [
-        "1 Bot Integration (Like Oggy's Single Mission)",
-        "Basic AI Features (Simple as Cat and Mouse)",
-        "5 API Connections (Oggy's Friends Network)",
-        "Email Support (Message in a Bottle)",
-        "Basic Analytics (Oggy's Activity Tracker)",
-        "Standard Response Time (Quick as a Cat!)"
+        "1 Bot Integration",
+        "Basic AI Features",
+        "5 API Connections",
+        "Email Support",
+        "Basic Analytics",
+        "Standard Response Time"
       ]
     },
     {
-      name: "Joey's Premium Plan",
+      name: "Premium Plan",
       basePrice: 9999,
-      description: "Advanced features as tricky as Joey's schemes!",
+      description: "Advanced features for growing businesses",
       features: [
-        "3 Bot Integrations (Triple Trouble like the Cockroaches)",
-        "Advanced AI Features (Clever as Joey's Plans)",
-        "Unlimited API Connections (Like Endless Chase Scenes)",
-        "24/7 Priority Support (Round-the-Clock Fun)",
-        "Advanced Analytics (Cockroach Intelligence Center)",
-        "Custom Training (Master Bob's Special Training)",
-        "Priority Response Time (Fast as Lightning)"
+        "3 Bot Integrations",
+        "Advanced AI Features",
+        "Unlimited API Connections",
+        "24/7 Priority Support",
+        "Advanced Analytics",
+        "Custom Training",
+        "Priority Response Time"
       ]
     },
     {
-      name: "Marky & Dee Dee's Enterprise Plan",
+      name: "Custom Plan",
       price: "Custom",
-      description: "Unlimited possibilities, as wild as Marky and Dee Dee's adventures!",
+      description: "Tailored solutions for enterprise needs",
       features: [
-        "Unlimited Bot Integrations (Whole House Coverage)",
-        "Custom AI Solutions (Smart as the Whole Gang)",
-        "Custom API Development (Kitchen to Rooftop Access)",
-        "Dedicated Support Team (Like Jack, Bob, and Olivia)",
-        "Enterprise Analytics (Full House Monitoring)",
-        "Custom Training (Special Moves Included)",
-        "Custom SLA (VIP Treatment)",
-        "Dedicated Manager (Your Personal Bob)"
+        "Unlimited Bot Integrations",
+        "Custom AI Solutions",
+        "Custom API Development",
+        "Dedicated Support Team",
+        "Enterprise Analytics",
+        "Custom Training",
+        "Custom SLA",
+        "Dedicated Manager"
       ]
     }
   ];
@@ -97,42 +97,42 @@ const Index = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <h1 className="text-6xl font-bold text-primary animate-bounce">
-            BotifyX: Oggy's Bot Factory
+            BotifyX
           </h1>
           <p className="text-2xl text-primary">
-            Where Bots are as Fun as Chasing Cockroaches!
+            Your Friendly Bot Development Partner!
           </p>
           <div className="flex justify-center gap-4">
             <Button
               onClick={() => setIsBookingOpen(true)}
               className="bg-[#FF69B4] hover:bg-[#FF1493] text-white text-lg px-8 py-6 rounded-full animate-pulse"
             >
-              Start the Chase Now!
+              Get Started Now!
             </Button>
           </div>
           
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-8 rounded-3xl bg-white/90 backdrop-blur shadow-xl transform hover:scale-105 transition-transform duration-300">
               <Globe className="w-12 h-12 text-[#FF69B4] mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-primary mb-3">Oggy's Website Bots</h3>
-              <p className="text-gray-600">Smart chatbots that chase your website visitors (in a good way!)</p>
+              <h3 className="text-2xl font-bold text-primary mb-3">Website Bot Development</h3>
+              <p className="text-gray-600">Smart chatbots that make your website interactive and engaging</p>
             </div>
             <div className="p-8 rounded-3xl bg-white/90 backdrop-blur shadow-xl transform hover:scale-105 transition-transform duration-300">
               <Bot className="w-12 h-12 text-[#FF69B4] mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-primary mb-3">Joey's AI Bots</h3>
-              <p className="text-gray-600">Clever AI bots that are as quick-witted as Joey!</p>
+              <h3 className="text-2xl font-bold text-primary mb-3">AI Bot Development</h3>
+              <p className="text-gray-600">Advanced AI-powered bots for intelligent automation</p>
             </div>
             <div className="p-8 rounded-3xl bg-white/90 backdrop-blur shadow-xl transform hover:scale-105 transition-transform duration-300">
               <MessageSquareCode className="w-12 h-12 text-[#FF69B4] mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-primary mb-3">Marky's Telegram Bots</h3>
-              <p className="text-gray-600">Telegram bots that deliver messages faster than Marky can run!</p>
+              <h3 className="text-2xl font-bold text-primary mb-3">Telegram Bot Development</h3>
+              <p className="text-gray-600">Custom Telegram bots for enhanced engagement</p>
             </div>
           </div>
         </div>
 
         <div className="mt-32">
           <h2 className="text-5xl font-bold text-center mb-16 text-primary">
-            Pick Your Adventure Plan!
+            Choose Your Plan
           </h2>
           
           <div className="flex justify-center mb-8">
@@ -176,7 +176,7 @@ const Index = () => {
                     onClick={() => setIsBookingOpen(true)}
                     className="w-full bg-[#FF69B4] hover:bg-[#FF1493] text-white rounded-full"
                   >
-                    Join the Adventure!
+                    Get Started
                   </Button>
                 </CardFooter>
               </Card>
