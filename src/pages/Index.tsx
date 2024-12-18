@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { BookingForm } from "@/components/BookingForm";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check } from "lucide-react";
+import { Check, Robot, Globe, MessageSquareCode } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 interface PricingPlan {
@@ -42,45 +42,45 @@ const Index = () => {
 
   const basePricingPlans: PricingPlan[] = [
     {
-      name: "Starter",
+      name: "Basic Plan",
       basePrice: 999,
-      description: "Perfect for small businesses starting with workflow automation",
+      description: "Perfect for small businesses starting with bot automation",
       features: [
-        "2 Workflow Automations",
-        "Basic Bot Integration",
+        "1 Bot Integration",
+        "Basic AI Features",
         "5 API Connections",
         "Email Support",
-        "Basic Analytics Dashboard",
-        "Standard SLA"
+        "Basic Analytics",
+        "Standard Response Time"
       ]
     },
     {
-      name: "Professional",
+      name: "Premium Plan",
       basePrice: 9999,
-      description: "Ideal for growing businesses requiring advanced automation",
+      description: "Advanced features for growing businesses",
       features: [
-        "10 Workflow Automations",
-        "Advanced Bot Integration",
+        "3 Bot Integrations",
+        "Advanced AI Features",
         "Unlimited API Connections",
         "24/7 Priority Support",
         "Advanced Analytics",
-        "Custom Bot Training",
-        "Priority SLA"
+        "Custom Training",
+        "Priority Response Time"
       ]
     },
     {
-      name: "Enterprise",
+      name: "Custom Plan",
       price: "Custom",
-      description: "Tailored solutions for large-scale operations",
+      description: "Tailored solutions for enterprise needs",
       features: [
-        "Unlimited Workflow Automations",
-        "Enterprise Bot Solutions",
+        "Unlimited Bot Integrations",
+        "Custom AI Solutions",
         "Custom API Development",
         "Dedicated Support Team",
-        "Enterprise Analytics Suite",
-        "Custom AI Model Training",
-        "Custom SLA Guarantee",
-        "Dedicated Success Manager"
+        "Enterprise Analytics",
+        "Custom Training",
+        "Custom SLA",
+        "Dedicated Manager"
       ]
     }
   ];
@@ -93,48 +93,51 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-primary text-primary-foreground">
+    <div className="min-h-screen bg-gradient-to-b from-[#FFB6C1] to-[#87CEEB] text-primary">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto text-center space-y-8">
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent animate-fadeIn">
+          <h1 className="text-6xl font-bold text-primary animate-bounce">
             BotifyX
           </h1>
-          <p className="text-xl text-gray-300">
-            The Premium AI Automation Platform for Business Growth
+          <p className="text-2xl text-primary">
+            Your Friendly Bot Development Partner!
           </p>
           <div className="flex justify-center gap-4">
             <Button
               onClick={() => setIsBookingOpen(true)}
-              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-8 py-6"
+              className="bg-[#FF69B4] hover:bg-[#FF1493] text-white text-lg px-8 py-6 rounded-full animate-pulse"
             >
-              Book a Consultation
+              Get Started Now!
             </Button>
           </div>
           
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 rounded-lg bg-white/5 backdrop-blur">
-              <h3 className="text-xl font-semibold text-secondary mb-3">Workflow Automation</h3>
-              <p className="text-gray-300">Custom workflow solutions that streamline your business processes</p>
+            <div className="p-8 rounded-3xl bg-white/90 backdrop-blur shadow-xl transform hover:scale-105 transition-transform duration-300">
+              <Globe className="w-12 h-12 text-[#FF69B4] mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-primary mb-3">Website Bot Development</h3>
+              <p className="text-gray-600">Smart chatbots that make your website interactive and engaging</p>
             </div>
-            <div className="p-6 rounded-lg bg-white/5 backdrop-blur">
-              <h3 className="text-xl font-semibold text-secondary mb-3">Bot Integration</h3>
-              <p className="text-gray-300">Advanced AI-powered bots that enhance customer engagement</p>
+            <div className="p-8 rounded-3xl bg-white/90 backdrop-blur shadow-xl transform hover:scale-105 transition-transform duration-300">
+              <Robot className="w-12 h-12 text-[#FF69B4] mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-primary mb-3">AI Bot Development</h3>
+              <p className="text-gray-600">Advanced AI-powered bots for intelligent automation</p>
             </div>
-            <div className="p-6 rounded-lg bg-white/5 backdrop-blur">
-              <h3 className="text-xl font-semibold text-secondary mb-3">API Integration</h3>
-              <p className="text-gray-300">Seamless connection with your existing systems and workflows</p>
+            <div className="p-8 rounded-3xl bg-white/90 backdrop-blur shadow-xl transform hover:scale-105 transition-transform duration-300">
+              <MessageSquareCode className="w-12 h-12 text-[#FF69B4] mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-primary mb-3">Telegram Bot Development</h3>
+              <p className="text-gray-600">Custom Telegram bots for enhanced engagement</p>
             </div>
           </div>
         </div>
 
         <div className="mt-32">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+          <h2 className="text-5xl font-bold text-center mb-16 text-primary">
             Choose Your Plan
           </h2>
           
           <div className="flex justify-center mb-8">
             <Select value={selectedRegion} onValueChange={setSelectedRegion}>
-              <SelectTrigger className="w-[200px] bg-white/5">
+              <SelectTrigger className="w-[200px] bg-white/90">
                 <SelectValue placeholder="Select Region" />
               </SelectTrigger>
               <SelectContent>
@@ -148,21 +151,21 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {basePricingPlans.map((plan) => (
-              <Card key={plan.name} className="bg-white/5 backdrop-blur border-secondary/20 hover:border-secondary/40 transition-colors">
+              <Card key={plan.name} className="bg-white/90 backdrop-blur border-none shadow-xl hover:transform hover:scale-105 transition-transform duration-300">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-secondary">{plan.name}</CardTitle>
-                  <CardDescription className="text-gray-300">{plan.description}</CardDescription>
+                  <CardTitle className="text-2xl text-[#FF69B4]">{plan.name}</CardTitle>
+                  <CardDescription className="text-gray-600">{plan.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-3xl font-bold text-secondary mb-6">
+                  <div className="text-4xl font-bold text-primary mb-6">
                     {typeof plan.basePrice === 'number' 
                       ? formatPrice(plan.basePrice, selectedRegion as keyof typeof regions)
                       : plan.price}
                   </div>
                   <ul className="space-y-3">
                     {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-gray-300">
-                        <Check className="h-5 w-5 text-secondary" />
+                      <li key={feature} className="flex items-center gap-2 text-gray-600">
+                        <Check className="h-5 w-5 text-[#FF69B4]" />
                         {feature}
                       </li>
                     ))}
@@ -171,7 +174,7 @@ const Index = () => {
                 <CardFooter>
                   <Button 
                     onClick={() => setIsBookingOpen(true)}
-                    className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                    className="w-full bg-[#FF69B4] hover:bg-[#FF1493] text-white rounded-full"
                   >
                     Get Started
                   </Button>

@@ -34,14 +34,14 @@ export function BookingForm({ open, onOpenChange }: BookingFormProps) {
       if (!response.ok) throw new Error("Submission failed");
 
       toast({
-        title: "Success!",
-        description: "Your booking request has been submitted. We'll contact you soon!",
+        title: "Yay! 🎉",
+        description: "We'll get back to you faster than Oggy catches cockroaches!",
       });
       onOpenChange(false);
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Failed to submit the form. Please try again.",
+        title: "Oops!",
+        description: "Something went wrong. Please try again!",
         variant: "destructive",
       });
     } finally {
@@ -51,18 +51,18 @@ export function BookingForm({ open, onOpenChange }: BookingFormProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[425px] bg-primary text-primary-foreground">
+      <DialogContent className="sm:max-w-[425px] bg-white/95 backdrop-blur">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-secondary">Book a Consultation</DialogTitle>
+          <DialogTitle className="text-2xl font-bold text-[#FF69B4]">Let's Build Your Bot!</DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="name">Full Name</Label>
+            <Label htmlFor="name">Your Name</Label>
             <Input
               id="name"
               name="name"
               required
-              className="bg-white/10 border-white/20 text-white"
+              className="border-[#FF69B4] focus:ring-[#FF69B4]"
               placeholder="John Doe"
             />
           </div>
@@ -73,7 +73,7 @@ export function BookingForm({ open, onOpenChange }: BookingFormProps) {
               name="email"
               type="email"
               required
-              className="bg-white/10 border-white/20 text-white"
+              className="border-[#FF69B4] focus:ring-[#FF69B4]"
               placeholder="john@company.com"
             />
           </div>
@@ -83,27 +83,27 @@ export function BookingForm({ open, onOpenChange }: BookingFormProps) {
               id="company"
               name="company"
               required
-              className="bg-white/10 border-white/20 text-white"
+              className="border-[#FF69B4] focus:ring-[#FF69B4]"
               placeholder="Company Inc."
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="message">Message</Label>
+            <Label htmlFor="message">Tell Us About Your Project</Label>
             <Textarea
               id="message"
               name="message"
               required
-              className="bg-white/10 border-white/20 text-white"
-              placeholder="Tell us about your automation needs..."
+              className="border-[#FF69B4] focus:ring-[#FF69B4]"
+              placeholder="What kind of bot would you like to build?"
               rows={4}
             />
           </div>
           <Button
             type="submit"
-            className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90"
+            className="w-full bg-[#FF69B4] hover:bg-[#FF1493] text-white rounded-full"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Submitting..." : "Book Consultation"}
+            {isSubmitting ? "Sending..." : "Let's Get Started!"}
           </Button>
         </form>
       </DialogContent>
