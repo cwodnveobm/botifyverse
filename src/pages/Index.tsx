@@ -44,11 +44,11 @@ const Index = () => {
     {
       name: "Briar Bear Plan",
       basePrice: 999,
-      description: "Perfect for small businesses starting with bot automation",
+      description: "Perfect for small businesses starting with automation",
       features: [
         "1 Bot Integration",
-        "Basic AI Features",
-        "5 API Connections",
+        "Basic Intelligence Features",
+        "5 Service Connections",
         "Email Support",
         "Basic Analytics",
         "Standard Response Time"
@@ -60,8 +60,8 @@ const Index = () => {
       description: "Advanced features for growing businesses",
       features: [
         "3 Bot Integrations",
-        "Advanced AI Features",
-        "Unlimited API Connections",
+        "Advanced Intelligence Features",
+        "Unlimited Service Connections",
         "24/7 Priority Support",
         "Advanced Analytics",
         "Custom Training",
@@ -74,8 +74,8 @@ const Index = () => {
       description: "Tailored solutions for enterprise needs",
       features: [
         "Unlimited Bot Integrations",
-        "Custom AI Solutions",
-        "Custom API Development",
+        "Custom Intelligence Solutions",
+        "Custom Service Development",
         "Dedicated Support Team",
         "Enterprise Analytics",
         "Custom Training",
@@ -97,17 +97,17 @@ const Index = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <h1 className="text-6xl font-bold text-primary animate-bounce">
-            BearBot Valley
+            Thulika Bots
           </h1>
           <p className="text-2xl text-primary">
-            Your Friendly Bot Development Partner from the Forest!
+            Your Friendly Bot Development Partner!
           </p>
           <div className="flex justify-center gap-4">
             <Button
               onClick={() => setIsBookingOpen(true)}
               className="bg-[#FF8B94] hover:bg-[#FF6B6B] text-white text-lg px-8 py-6 rounded-full animate-pulse"
             >
-              Start Your Forest Adventure!
+              Start Your Journey!
             </Button>
           </div>
           
@@ -115,24 +115,24 @@ const Index = () => {
             <div className="p-8 rounded-3xl bg-white/90 backdrop-blur shadow-xl transform hover:scale-105 transition-transform duration-300">
               <Globe className="w-12 h-12 text-[#FF8B94] mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-primary mb-3">Website Bot Development</h3>
-              <p className="text-gray-600">Smart chatbots that make your website as lively as the forest!</p>
+              <p className="text-gray-600">Smart chatbots that make your website interactive and engaging!</p>
             </div>
             <div className="p-8 rounded-3xl bg-white/90 backdrop-blur shadow-xl transform hover:scale-105 transition-transform duration-300">
               <Bot className="w-12 h-12 text-[#FF8B94] mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-primary mb-3">AI Bot Development</h3>
-              <p className="text-gray-600">Advanced AI-powered bots as clever as our forest friends</p>
+              <p className="text-gray-600">Advanced AI-powered bots for seamless automation</p>
             </div>
             <div className="p-8 rounded-3xl bg-white/90 backdrop-blur shadow-xl transform hover:scale-105 transition-transform duration-300">
               <MessageSquareCode className="w-12 h-12 text-[#FF8B94] mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-primary mb-3">Telegram Bot Development</h3>
-              <p className="text-gray-600">Custom Telegram bots that spread joy like honey in the forest</p>
+              <p className="text-gray-600">Custom Telegram bots that enhance your communication</p>
             </div>
           </div>
         </div>
 
         <div className="mt-32">
           <h2 className="text-5xl font-bold text-center mb-16 text-primary">
-            Choose Your Forest Plan
+            Choose Your Plan
           </h2>
           
           <div className="flex justify-center mb-8">
@@ -176,7 +176,7 @@ const Index = () => {
                     onClick={() => setIsBookingOpen(true)}
                     className="w-full bg-[#FF8B94] hover:bg-[#FF6B6B] text-white rounded-full"
                   >
-                    Join the Forest
+                    Get Started
                   </Button>
                 </CardFooter>
               </Card>
