@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { BookingForm } from "@/components/BookingForm";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, Robot, Globe, MessageSquareCode } from "lucide-react";
+import { Check, Bot, Globe, MessageSquareCode } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 interface PricingPlan {
@@ -118,7 +118,7 @@ const Index = () => {
               <p className="text-gray-600">Smart chatbots that make your website interactive and engaging</p>
             </div>
             <div className="p-8 rounded-3xl bg-white/90 backdrop-blur shadow-xl transform hover:scale-105 transition-transform duration-300">
-              <Robot className="w-12 h-12 text-[#FF69B4] mx-auto mb-4" />
+              <Bot className="w-12 h-12 text-[#FF69B4] mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-primary mb-3">AI Bot Development</h3>
               <p className="text-gray-600">Advanced AI-powered bots for intelligent automation</p>
             </div>
