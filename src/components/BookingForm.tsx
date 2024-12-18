@@ -23,7 +23,7 @@ export function BookingForm({ open, onOpenChange }: BookingFormProps) {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch("https://forme.io", {
+      const response = await fetch("https://formspree.io/f/xyzyqlzy", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
