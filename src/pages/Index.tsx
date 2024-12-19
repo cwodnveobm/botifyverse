@@ -49,8 +49,6 @@ const Index = () => {
         "1 Bot Integration",
         "Basic Intelligence Features",
         "5 Service Connections",
-        "Email Support",
-        "Basic Analytics",
         "Standard Response Time"
       ]
     },
@@ -60,10 +58,8 @@ const Index = () => {
       description: "Advanced features for growing businesses",
       features: [
         "3 Bot Integrations",
-        "Advanced Intelligence Features",
         "Unlimited Service Connections",
         "24/7 Priority Support",
-        "Advanced Analytics",
         "Custom Training",
         "Priority Response Time"
       ]
@@ -75,11 +71,9 @@ const Index = () => {
       features: [
         "Unlimited Bot Integrations",
         "Custom Intelligence Solutions",
-        "Custom Service Development",
+        "Custom Training",
         "Dedicated Support Team",
         "Enterprise Analytics",
-        "Custom Training",
-        "Custom SLA",
         "Dedicated Manager"
       ]
     }
