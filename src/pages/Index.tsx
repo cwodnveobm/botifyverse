@@ -42,6 +42,12 @@ const Index = () => {
       symbol: "USD",
       countries: ["China", "India", "Japan", "South Korea", "Singapore", "Australia", "New Zealand"]
     },
+    middle_east: {
+      currency: "$",
+      multiplier: 11,
+      symbol: "USD",
+      countries: ["Palestine"]
+    },
     africa: {
       currency: "$",
       multiplier: 8,
@@ -153,6 +159,7 @@ const Index = () => {
                 <SelectItem value="south_america">South America</SelectItem>
                 <SelectItem value="europe">Europe</SelectItem>
                 <SelectItem value="asia_pacific">Asia Pacific</SelectItem>
+                <SelectItem value="middle_east">Middle East</SelectItem>
                 <SelectItem value="africa">Africa</SelectItem>
               </SelectContent>
             </Select>
