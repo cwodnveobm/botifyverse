@@ -15,28 +15,38 @@ interface PricingPlan {
 
 const Index = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
-  const [selectedRegion, setSelectedRegion] = useState("worldwide");
+  const [selectedRegion, setSelectedRegion] = useState("asia_pacific");
 
   const regions = {
-    worldwide: {
-      currency: "₹",
-      multiplier: 1,
-      symbol: "INR"
+    north_america: {
+      currency: "$",
+      multiplier: 12,
+      symbol: "USD",
+      countries: ["United States", "Canada"]
     },
-    gcc: {
-      currency: "د.إ",
-      multiplier: 52.5,
-      symbol: "AED"
+    south_america: {
+      currency: "$",
+      multiplier: 10,
+      symbol: "USD",
+      countries: ["Brazil", "Argentina"]
     },
     europe: {
       currency: "€",
-      multiplier: 60,
-      symbol: "EUR"
+      multiplier: 11,
+      symbol: "EUR",
+      countries: ["Germany", "United Kingdom", "France", "Sweden", "Estonia", "Switzerland"]
     },
-    uk: {
-      currency: "£",
-      multiplier: 67.5,
-      symbol: "GBP"
+    asia_pacific: {
+      currency: "$",
+      multiplier: 12,
+      symbol: "USD",
+      countries: ["China", "India", "Japan", "South Korea", "Singapore", "Australia", "New Zealand"]
+    },
+    africa: {
+      currency: "$",
+      multiplier: 8,
+      symbol: "USD",
+      countries: ["South Africa", "Kenya", "Nigeria"]
     }
   };
 
@@ -130,21 +140,26 @@ const Index = () => {
 
         <div className="mt-32">
           <h2 className="text-5xl font-bold text-center mb-16 text-white">
-            Choose Your Plan
+            Choose Your Region
           </h2>
           
           <div className="flex justify-center mb-8">
             <Select value={selectedRegion} onValueChange={setSelectedRegion}>
-              <SelectTrigger className="w-[200px] bg-white/10 text-white border-white/20">
+              <SelectTrigger className="w-[250px] bg-white/10 text-white border-white/20">
                 <SelectValue placeholder="Select Region" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="worldwide">Worldwide (INR)</SelectItem>
-                <SelectItem value="gcc">GCC (AED)</SelectItem>
-                <SelectItem value="europe">Europe (EUR)</SelectItem>
-                <SelectItem value="uk">UK (GBP)</SelectItem>
+                <SelectItem value="north_america">North America</SelectItem>
+                <SelectItem value="south_america">South America</SelectItem>
+                <SelectItem value="europe">Europe</SelectItem>
+                <SelectItem value="asia_pacific">Asia Pacific</SelectItem>
+                <SelectItem value="africa">Africa</SelectItem>
               </SelectContent>
             </Select>
+          </div>
+
+          <div className="mb-8 text-center text-white/80">
+            Available in: {regions[selectedRegion as keyof typeof regions].countries.join(", ")}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
