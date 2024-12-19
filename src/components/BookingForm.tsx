@@ -51,56 +51,56 @@ export function BookingForm({ open, onOpenChange }: BookingFormProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[425px] bg-white/95 backdrop-blur">
+      <DialogContent className="sm:max-w-[425px] bg-[#0A1A2F]/95 backdrop-blur border border-white/20">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-[#FF69B4]">Let's Build Your Bot!</DialogTitle>
+          <DialogTitle className="text-2xl font-bold text-[#00F0FF]">Let's Build Your Bot!</DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="name">Your Name</Label>
+            <Label htmlFor="name" className="text-white">Your Name</Label>
             <Input
               id="name"
               name="name"
               required
-              className="border-[#FF69B4] focus:ring-[#FF69B4]"
+              className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
               placeholder="John Doe"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email" className="text-white">Email</Label>
             <Input
               id="email"
               name="email"
               type="email"
               required
-              className="border-[#FF69B4] focus:ring-[#FF69B4]"
+              className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
               placeholder="john@company.com"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="company">Company Name</Label>
+            <Label htmlFor="company" className="text-white">Company Name</Label>
             <Input
               id="company"
               name="company"
               required
-              className="border-[#FF69B4] focus:ring-[#FF69B4]"
+              className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
               placeholder="Company Inc."
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="message">Tell Us About Your Project</Label>
+            <Label htmlFor="message" className="text-white">Tell Us About Your Project</Label>
             <Textarea
               id="message"
               name="message"
               required
-              className="border-[#FF69B4] focus:ring-[#FF69B4]"
+              className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
               placeholder="What kind of bot would you like to build?"
               rows={4}
             />
           </div>
           <Button
             type="submit"
-            className="w-full bg-[#FF69B4] hover:bg-[#FF1493] text-white rounded-full"
+            className="w-full bg-[#00F0FF] hover:bg-[#00D1E0] text-[#0A1A2F] rounded-full"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Sending..." : "Let's Get Started!"}
