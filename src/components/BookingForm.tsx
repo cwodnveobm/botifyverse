@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 interface BookingFormProps {
   open: boolean;
@@ -34,8 +34,8 @@ export function BookingForm({ open, onOpenChange }: BookingFormProps) {
       if (!response.ok) throw new Error("Submission failed");
 
       toast({
-        title: "Yay! 🎉",
-        description: "We'll get back to you faster than Oggy catches cockroaches!",
+        title: "Thank you! 🎉",
+        description: "Thank you for your submission! We appreciate your trust in Thulika Bots. Our team will review your request and get back to you shortly. 😊",
       });
       onOpenChange(false);
     } catch (error) {
